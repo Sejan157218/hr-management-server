@@ -34,6 +34,7 @@ app.get("/employee", (req, res) => {
         if (endingLink < page + 4) {
           iterator -= page + 4 - numberOfPages;
         }
+        // send data
         res.send({
           page,
           iterator,
