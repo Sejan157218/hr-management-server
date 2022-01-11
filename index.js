@@ -34,12 +34,14 @@ app.get("/employee", (req, res) => {
         if (endingLink < page + 4) {
           iterator -= page + 4 - numberOfPages;
         }
+        console.log(numOfResults);
         res.send({
-          result,
           page,
           iterator,
           endingLink,
           numberOfPages,
+          numOfResults,
+          result,
         });
       }
     );
