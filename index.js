@@ -19,7 +19,7 @@ app.get("/employee", (req, res) => {
     if (page > numberOfPages) {
       res.redirect("/employee?page=" + encodeURIComponent(numberOfPages));
     } else if (page < 1) {
-      res.redirect("employee/?page=" + encodeURIComponent("1"));
+      res.redirect("/employee/?page=" + encodeURIComponent(1));
     }
     const startingLimit = (page - 1) * resultsPerPage;
     db.query(
@@ -34,7 +34,6 @@ app.get("/employee", (req, res) => {
         if (endingLink < page + 4) {
           iterator -= page + 4 - numberOfPages;
         }
-        console.log(numOfResults);
         res.send({
           page,
           iterator,
