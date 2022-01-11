@@ -62,7 +62,7 @@ app.post("/employee", (req, res) => {
 
 // delete data
 app.delete("/employee/:id", (req, res) => {
-  console.log(req.params.id);
+
   db.query(
     "DELETE FROM allemployees WHERE id =" + req.params.id,
     (err, result) => {
