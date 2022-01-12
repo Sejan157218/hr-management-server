@@ -45,7 +45,6 @@ app.get("/employee", (req, res) => {
         });
       }
     );
-   
   });
 });
 
@@ -61,7 +60,7 @@ app.post("/employee", (req, res) => {
   });
 });
 
-// post data
+// delete data
 app.delete("/employee/:id", (req, res) => {
   console.log(req.params.id);
   db.query(
