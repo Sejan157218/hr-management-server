@@ -79,6 +79,7 @@ app.get("/", (req, res) => {
   res.send("Running!");
 });
 
+// running console
 app.listen(port, () => {
   console.log(`ASH Service!`, port);
 });
